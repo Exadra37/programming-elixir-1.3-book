@@ -1,0 +1,59 @@
+version: "2.1"
+
+# Inspired in: http://davidanguita.name/articles/dockerizing-a-phoenix-project/
+
+services:
+  build:
+    build: ./docker
+    image: exadra37/elixir
+    env_file: .env
+    volumes_from:
+      - app
+
+  shell:
+    image: exadra37/elixir
+    env_file: .env
+    environment:
+      - MIX_ENV=dev
+    depends_on:
+      postgres:
+        condition: service_healthy
+    links:
+      - build
+    ports:
+      - "4000:4000"
+    command:
+      - zsh
+    volumes_from:
+      - app
+
+  web:
+    image: exadra37/elixir
+    env_file: .env
+    environment:
+      - MIX_ENV=dev # That's the environment mode, you know
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes_from:
+      - app
+    ports:
+      - "4000:4000"
+    links:
+      - build
+
+  app:
+    image: tianon/true
+    volumes:
+      - ./:/app
+
+  postgres:
+    image: postgres
+    env_file: .env
+    healthcheck:
+      test: ["CMD-SHELL", "psql -h 'localhost' -U 'postgres' -c '\\l'"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    ports:
+      - "5432"
