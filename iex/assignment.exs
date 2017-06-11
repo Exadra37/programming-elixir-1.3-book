@@ -20,7 +20,7 @@ IO.puts (var1 = 3)
 IO.puts "Let's execute: 3 = var1"
 IO.puts (3 = var1)
 IO.puts "Result is 3 because the matches succeeds in both operations."
-IO.puts "In first operation it succeeds because it binds the value  "
-IO.puts "Now lets's try: 4 = var1"
+IO.puts "In first operation it succeeds because it binds the value 3 to var1."
+IO.puts "Now let's try: 4 = var1"
 IO.puts "It throws an error because left hand side is 4 and right side is 3, the value of var1 (4 = 3)."
 IO.puts (4 = var1)
