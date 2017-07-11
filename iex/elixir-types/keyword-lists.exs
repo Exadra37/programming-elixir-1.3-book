@@ -14,6 +14,6 @@ IO.inspect([name: "Dave", city: "Dallas", likes: "Programming"])
 
 IO.write "
 # Mixing a List with a Keyword List
-iex()> [1, fred: q, dave: 2]
+iex()> [1, fred: 1, dave: 2]
 "
 IO.inspect([1, fred: 1, dave: 2])

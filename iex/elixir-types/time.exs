@@ -19,7 +19,7 @@ iex()> time1 = Time.new(23, 29, 58)
 IO.inspect(time1 = Time.new(23, 29, 58))
 
 IO.write "
-# Creating the same time manually.
+# Creating the same time with microseconds.
 iex()> time2 = Time.new(23, 29, 58, 00)
 "
 IO.inspect(time2 = Time.new(23, 29, 58, 00))
