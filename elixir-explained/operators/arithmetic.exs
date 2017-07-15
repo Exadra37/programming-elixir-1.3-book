@@ -1,4 +1,4 @@
-# Chapter 4 > Elixir Operators > Operators > Arithemetic
+# Chapter 4 > Elixir Basics > Operators > Arithemetic
 
 IO.puts "
 Arithmetic Operators

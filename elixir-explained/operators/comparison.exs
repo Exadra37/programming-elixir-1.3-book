@@ -1,4 +1,4 @@
-# Chapter 4 > Elixir Operators > Operators > Comparison
+# Chapter 4 > Elixir Basics > Operators > Comparison
 
 IO.write "
 COMPARISON OPERATORS

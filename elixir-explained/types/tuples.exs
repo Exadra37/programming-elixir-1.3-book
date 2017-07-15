@@ -1,4 +1,4 @@
-# Chapter 4 - Elixir Basics - Collection Types
+# Chapter 4 > Elixir Basics > Collection Types > Tuples
 
 
 IO.puts "

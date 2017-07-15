@@ -1,4 +1,4 @@
-# Chapter 4 > Elixir Operators > Operators > Join
+# Chapter 4 > Elixir Basics > Operators > Join
 
 IO.puts "
 Join Operators

@@ -1,4 +1,4 @@
-# Chapter 4 > Elixir Operators > Operators > In
+# Chapter 4 > Elixir Basics > Operators > In
 
 IO.puts "
 The In Operator:

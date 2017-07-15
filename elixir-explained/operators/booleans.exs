@@ -1,4 +1,4 @@
-# Chapter 4 > Elixir Operators > Operators > Boleans
+# Chapter 4 > Elixir Basics > Operators > Boleans
 
 
 IO.puts "
