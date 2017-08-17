@@ -12,6 +12,7 @@ RUN apt-get update && \
         apt-utils \
         locales \
         curl \
+        less \
         git \
         zsh && \
     apt install -f && \
@@ -29,6 +30,8 @@ RUN apt-get update && \
     apt-get install -y -q nodejs
 
 USER "${CONTAINER_USER}"
+
+COPY .gitconfig /home/"${CONTAINER_USER}"/.gitconfig
 
 # This commands will run under user defined above
 RUN mix local.hex --force && \
