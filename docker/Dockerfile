@@ -1,4 +1,4 @@
-FROM elixir
+FROM elixir:1.3.4
 
 # Inspired in: http://davidanguita.name/articles/dockerizing-a-phoenix-project/
 
