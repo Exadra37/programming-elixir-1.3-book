@@ -36,6 +36,9 @@ defmodule MyListSquare do
 
     ---> Try it in IEX:
 
+      iex> c "examples/chapter-7/my_list_square.exs"
+      [MyListSquare]
+
       iex> MyListSquare.square([4, 5, 6])
       → square([5, 6])"
       [16 | [5, 6]]

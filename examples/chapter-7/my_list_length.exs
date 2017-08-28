@@ -25,8 +25,8 @@ defmodule MyListLength do
 
     Let's see an example to count recursively the total number of elements in a list.
 
-    iex> c "examples/my_list.exs"
-    [MyList]
+    iex> c "examples/chapter-7/my_list_length.exs"
+    [MyListLength]
 
     iex> MyList.len([11, 12, 13, 14, 15])
     → len([12, 13, 14, 15])
