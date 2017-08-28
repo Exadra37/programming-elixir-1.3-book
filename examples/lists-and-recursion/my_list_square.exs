@@ -36,7 +36,7 @@ defmodule MyListSquare do
 
     ---> Try it in IEX:
 
-      iex> c "examples/chapter-7/my_list_square.exs"
+      iex> c "examples/lists-and-recursion/my_list_square.exs"
       [MyListSquare]
 
       iex> MyListSquare.square([4, 5, 6])

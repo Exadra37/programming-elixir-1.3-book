@@ -42,7 +42,7 @@ defmodule MyListSum do
 
     ---> Try in IEX:
 
-      iex> c "examples/chapter-7/my_list_sum.exs"
+      iex> c "examples/lists-and-recursion/my_list_sum.exs"
       [MyListSum]
 
       iex> MyListSum.sum([1,2,3,4,5])

@@ -34,7 +34,7 @@ defmodule MyListIncrement do
 
     ---> Try it in IEX:
 
-      iex> c "examples/chapter-7/my_list_increment.exs"
+      iex> c "examples/lists-and-recursion/my_list_increment.exs"
       [MyListIncrement]
 
       iex> MyListIncrement.increment([1,3,5])

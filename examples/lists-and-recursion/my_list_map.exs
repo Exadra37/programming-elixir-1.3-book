@@ -29,7 +29,7 @@ defmodule MyListMap do
 
     ---> Try it in IEX:
 
-    iex> c "examples/chapter-7/my_list_map.exs"
+    iex> c "examples/lists-and-recursion/my_list_map.exs"
     [MyListMap]
 
     # Replicating MyListSquare
