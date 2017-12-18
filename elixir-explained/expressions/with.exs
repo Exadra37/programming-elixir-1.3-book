@@ -64,12 +64,12 @@ Essentially the operator '<-' will return the value that couldn't be matched, th
 IO.puts "
 # So in this Pattern Matching example a Match Error will be raised because 0 does not exist in right side at the first 
    position in the list.
-iex> with [0|_] = [1, 2, 3], do: \"Found\"
+iex> [0|_] = [1, 2, 3]
 ** (MatchError) no match of right hand side value: [1, 2, 3]
     with.exs:66: (file)
     (elixir) lib/code.ex:370: Code.require_file/2
 "
-#IO.inspect(with [0|_] = [1, 2, 3], do: "Found")
+#IO.inspect([0|_] = [1, 2, 3])
 
 IO.puts "
 # Using 'with' expression we can control the Pattern Matching failures.
