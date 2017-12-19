@@ -31,11 +31,9 @@ RUN apt-get update && \
 
 USER "${CONTAINER_USER}"
 
-COPY .gitconfig /home/"${CONTAINER_USER}"/.gitconfig
-
 # This commands will run under user defined above
 RUN mix local.hex --force && \
     mix local.rebar --force
 
 # Set the workdir for the container user defined above
-WORKDIR /app
+WORKDIR /home/elixir/app

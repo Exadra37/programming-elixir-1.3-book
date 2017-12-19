@@ -3,32 +3,40 @@ version: "2.1"
 # Inspired in: http://davidanguita.name/articles/dockerizing-a-phoenix-project/
 
 services:
-  build:
-    build: ./docker
-    image: exadra37/elixir
-    env_file: .env
-    volumes_from:
-      - app
 
   shell:
-    image: exadra37/elixir
+    build: ./docker
+    image: ${SHELL_IMAGE:-exadra37/elixir:1.3.4}
     env_file: .env
     environment:
       - MIX_ENV=dev
     depends_on:
       postgres:
-        condition: service_healthy
-    links:
-      - build
+          condition: service_healthy
     ports:
-      - "4000:4000"
+      - ${SHELL_PORTS_MAP:-4001:4000}
     command:
       - zsh
     volumes_from:
       - app
+    volumes:
+      - ${SHELL_SSH_VOLUME_MAP:-~/.ssh:/home/elixir/.ssh}
+      - ${SHELL_GIT_CONFIG_VOLUME_MAP:-~/.gitconfig:/home/elixir/.gitconfig}
+ 
+  iex:
+    build: ./docker
+    image: ${IEX_IMAGE:-exadra37/elixir:1.3.4}
+    env_file: .env
+    environment:
+      - MIX_ENV=dev
+    command:
+      - iex
+    volumes_from:
+      - app
 
   web:
-    image: exadra37/elixir
+    build: ./docker
+    image: ${WEB_IMAGE:-exadra37/elixir:1.3.4}
     env_file: .env
     environment:
       - MIX_ENV=dev # That's the environment mode, you know
@@ -38,14 +46,12 @@ services:
     volumes_from:
       - app
     ports:
-      - "4000:4000"
-    links:
-      - build
+      - ${WEB_PORTS_MAP:-4000:4000}
 
   app:
     image: tianon/true
     volumes:
-      - ./:/app
+      - ./:/home/elixir/app
 
   postgres:
     image: postgres
