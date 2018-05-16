@@ -20,11 +20,12 @@ defmodule MyListMap do
 
     CREATING A MAP FUNCTION
 
-      The modules MyListSquare and MyListIncrement have a very similar way of achieving their purpose, only differing in
+      The modules MyListSquare and MyListIncrement have a very similar way of achieving their purpose, only differing
       in the maths operations.
 
-      We can easily generalize this with a map function that accepts as first argument the same list above modules also
-      accept plus a second argument with an anonymous function that will perform the same maths operations.
+      We can easily generalize this with a map function that accepts as first argument a list and as a second argument
+      an anonymous function to perform the same maths operations as per previous modules to increment or square the
+      given list.
 
 
     ---> Try it in IEX:
