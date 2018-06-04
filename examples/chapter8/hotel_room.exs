@@ -3,7 +3,7 @@
 
 defmodule HotelRoom do
 
-  @moddoc """
+  @moduledoc """
   # Pattern Matching with Conditional Expressions
 
   This modules exemplifies how we can leverage pattern matching with conditional

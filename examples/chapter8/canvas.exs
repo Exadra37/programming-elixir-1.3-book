@@ -3,7 +3,7 @@
 
 defmodule Canvas do
 
-  @moddoc"""
+  @moduledoc """
   # Keyword Lists
 
   Often used when passing options into functions.

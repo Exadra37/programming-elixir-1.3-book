@@ -3,7 +3,7 @@
 
 defmodule WeatherHistory do
 
-  @docmod"""
+  @moduledoc """
   # WEATHER HISTORY
 
   This module is an example on how we can pattern matching in a more complex
@@ -14,21 +14,23 @@ defmodule WeatherHistory do
   from the head of the list while at same time we extract the entire head.
   """
 
-  def for_location([], _target_loc) do
-    []
-  end
-
-  @doc"""
+  @doc """
   ## Pattern Matching on Multiple Values in the Head of a List
 
   When the head of a List is another list we can pattern macht on any of is
   values in order to extract them while at same time we also extract the head.
 
-  #### Example
+  ### Example
 
-  iex> WeatherHistory.for_location([[1366225622, 26, 15, 0.125]], 26)
-  [[1366225622, 26, 15, 0.125]]
+    iex> WeatherHistory.for_location(WeatherHistory.test_data, 26)
+    [[1366225622, 26, 15, 0.125], [1366229222, 26, 19, 0.081],
+     [1366232822, 26, 22, 0.095], [1366236422, 26, 17, 0.025]]
+
   """
+  def for_location([], _target_loc) do
+    []
+  end
+
   def for_location([ head = [_, target_loc, _, _] | tail ], target_loc) do
     [ head | for_location(tail, target_loc) ]
   end
@@ -37,6 +39,11 @@ defmodule WeatherHistory do
     for_location(tail, target_loc)
   end
 
+  @doc """
+  ## Test data
+
+  Data to use when playing with the module in `iex` for learning purposes.
+  """
   def test_data() do
     [
       [1366225622, 26, 15, 0.125],
