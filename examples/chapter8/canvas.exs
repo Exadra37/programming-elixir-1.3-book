@@ -3,7 +3,7 @@
 
 defmodule Canvas do
 
-  @moddoc"""
+  @moduledoc """
   # Keyword Lists
 
   Often used when passing options into functions.
@@ -12,7 +12,7 @@ defmodule Canvas do
   or for more complex use cases we can use any of the functions available from
   **Keyword** and **Enum** modules.
   """
-
+  
   @defaults [
     fg:   "black",
     bg:   "white",

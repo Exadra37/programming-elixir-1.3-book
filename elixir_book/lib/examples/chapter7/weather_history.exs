@@ -3,7 +3,7 @@
 
 defmodule WeatherHistory do
 
-  @docmod"""
+  @moduledoc """
   # WEATHER HISTORY
 
   This module is an example on how we can pattern matching in a more complex

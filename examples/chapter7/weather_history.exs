@@ -3,7 +3,7 @@
 
 defmodule WeatherHistory do
 
-  @docmod"""
+  @moduledoc """
   # WEATHER HISTORY
 
   This module is an example on how we can pattern matching in a more complex
@@ -18,7 +18,7 @@ defmodule WeatherHistory do
     []
   end
 
-  @doc"""
+  @doc """
   ## Pattern Matching on Multiple Values in the Head of a List
 
   When the head of a List is another list we can pattern macht on any of is
