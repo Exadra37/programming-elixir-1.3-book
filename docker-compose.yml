@@ -6,7 +6,7 @@ services:
 
   shell:
     build: ./docker
-    image: ${SHELL_IMAGE:-exadra37/elixir:1.3.4}
+    image: ${SHELL_IMAGE:-exadra37/elixir:1.6}
     env_file: .env
     environment:
       - MIX_ENV=dev
@@ -25,7 +25,7 @@ services:
  
   iex:
     build: ./docker
-    image: ${IEX_IMAGE:-exadra37/elixir:1.3.4}
+    image: ${IEX_IMAGE:-exadra37/elixir:1.6}
     env_file: .env
     environment:
       - MIX_ENV=dev
@@ -36,7 +36,7 @@ services:
 
   web:
     build: ./docker
-    image: ${WEB_IMAGE:-exadra37/elixir:1.3.4}
+    image: ${WEB_IMAGE:-exadra37/elixir:1.6}
     env_file: .env
     environment:
       - MIX_ENV=dev # That's the environment mode, you know
@@ -51,7 +51,7 @@ services:
   app:
     image: tianon/true
     volumes:
-      - ./:/home/elixir/app
+      - ./:/home/elixir/workspace
 
   postgres:
     image: postgres
